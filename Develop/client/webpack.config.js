@@ -8,7 +8,7 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
     },
     output: {
       filename: '[name].bundle.js',
@@ -24,16 +24,16 @@ module.exports = () => {
         swDest: 'service-worker.js',
       }),
       new WebpackPwaManifest({
-        name: 'App Name',
-        short_name: 'App',
-        description: 'Description of the app',
+        name: 'Text Editor',
+        short_name: 'Text',
+        description: 'An app that lets you write text.',
         background_color: '#ffffff',
         theme_color: '#ffffff',
         start_url: './',
         publicPath: './',
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
+            src: path.resolve(__dirname, 'src/images/logo.png'), // Correct path to the logo
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
@@ -45,6 +45,10 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i, // Rule to handle image files
+          type: 'asset/resource',
         },
         {
           test: /\.m?js$/,

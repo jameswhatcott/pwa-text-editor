@@ -31,12 +31,12 @@
       "type": "image/png"
     }
   ],
-  "name": "App Name",
-  "short_name": "App",
+  "name": "Text Editor",
+  "short_name": "Text",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./",
-  "description": "Description of the app",
+  "description": "An app that lets you write text.",
   "background_color": "#ffffff",
   "theme_color": "#ffffff"
 }
