@@ -12,9 +12,7 @@ The app is built using Webpack for bundling assets, Workbox for service worker i
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
-- [License](#license)
-- [Contributing](#contributing)
-- [Questions](#questions)
+- [Live Site](#live-site)
 
 ## Installation
 
